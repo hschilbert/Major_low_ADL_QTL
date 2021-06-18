@@ -27,7 +27,7 @@ Usage:
   --out    STR     Output directory
   
   Optional:
-  --k    INT     k-mer size, activate k-mer approach
+  --k    INT     k-mer size, activate k-mer approach [default: 15]
 ```
 
 `--read` fasta-file that contains the sequence of a lond-read that should be analysed.
