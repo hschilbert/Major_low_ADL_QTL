@@ -10,31 +10,31 @@ scripts belonging to major low ADL QTL publication
 Full paths should be used to specify input and output files and folders. Sequence names should not contain white space characters like spaces and TABs. Underscores can be used to replace spaces.
 
 ## assign_read_to_chr.py
-This script assigns reads to chromosomes base on a k-mer approach. 
+This script assigns a long-read read to the given chromosomal sequences derived from the A- and the C-genome of Brassica napus. By using the k-mer approach the border sequence of a chimeric read, containing a A- and a C-genome specific sequence part, can be identified. The chimeric read will first be splitted in to k-mers, second each k-mer will be assigned to the A- or C-genome. If a k-mer is present in both subgenomes it will be excluded from further analysis. The number of unique sub-genome specific k-mers per read position will be plotted and stored as PDF. The underlying data of the figure, e.g. position and sequence per analysed k-mer and its subgenome assignment is provided in an additional file.
 
 ```
 Usage:
-  python assign_read_to_chr.py --in <FILE> --exp <FILE> --out <DIR>
+  python assign_read_to_chr.py --read <FILE> --refA <FILE> --refA <FILE> --out <DIR>
   
   Mandatory:
   
   Inputs 
-  --in     STR     gene IDs, one gene ID per line
-  --exp    STR     RNA-Seq count table, columns containing RNA-Seq sample IDs, rows gene IDs
-  
+  --read    STR     read sequence in FASTA format
+  --refA    STR     A-subgenome specific sequence derived from e.g. an assembly file
+  --refB    STR     C-subgenome specific sequence derived from e.g. an assembly file
+
   Output directory
   --out    STR     Output directory
   
   Optional:
-  --ann    STR     functional annotation file, first column gene IDs, second column functional annotation
+  --k    INT     k-mer size, activate k-mer approach
 ```
 
-`--in` txt-file that contains a gene ID or a set of gene IDs for which co-expressed genes should be identified, where one gene ID is listed in one row. The gene ID must match with the gene IDs in the files given at `--exp` and `--ann`.
+`--read` fasta-file that contains the sequence of a lond-read that should be analysed.
 
-`--exp` count table/gene expression file containing e.g. the TPM values where the columns contain the RNA-Seq sample IDs and the rows contain the gene IDs. Thus more than one RNA-Seq sample can be analysed at the same time. 
+`--refA` fasta-file containing the A-subgenome specific sequence which should be used as a subject for the assignment to the A-subgenome. 
 
-`--out` specify the output directory where the results should be stored
+`--refB` fasta-file containing the C-subgenome specific sequence which should be used as a subject for the assignment to the C-subgenome. 
 
-`--ann` functional annotation where one the first column contains gene IDs and the second column contains the functional annotation. Contains a header "Gene_ID\tAnnotation"
+`--k` size of the k-mer given as integer.
 
-All files should be provided in tab separated format.
