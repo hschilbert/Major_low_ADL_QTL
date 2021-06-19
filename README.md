@@ -39,16 +39,12 @@ Usage:
 `--k` size of the k-mer given as integer.
 
 ## cov_analysis.py
-This script calculates the coverage of a region of interest compared to the coverage of the respective chromosome based on a BAM file.
+This script compares and visualizes the mean, median, and mode coverage of a region of interest compared to the coverage of the respective chromosome based on a coverage file.
 
 ```
 Usage:  
   python cov_analysis.py --cov <FILE> --fig <FILE> --chr <STR> --start <INT> --end <INT>
-  					 <COVERAGE_FILE>
-					 <OUTPUT_FIGURE_FILE>
-					 <CHROMOSOME_OF_INTEREST>
-					 <START_POSITION>
-					 <END_POSITION>
+
   Mandatory:
   
   Inputs 
