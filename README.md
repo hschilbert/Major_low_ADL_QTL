@@ -39,7 +39,7 @@ Usage:
 `--k` size of the k-mer given as integer.
 
 ## cov_analysis.py
-This script compares and visualizes the mean, median, and mode coverage of a region of interest compared to the coverage of the respective chromosome based on a coverage file.
+This script compares and visualizes coverage of a region of interest compared to the coverage of the respective chromosome based on a coverage file.
 
 ```
 Usage:  
