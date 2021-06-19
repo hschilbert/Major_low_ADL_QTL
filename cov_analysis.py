@@ -1,6 +1,3 @@
-### Boas Pucker ###
-### bpucker@cebitec.uni-bielefeld.de ###
-
 __usage__ = """
 					python cov_analysis.py
 					--cov <COVERAGE_FILE>
