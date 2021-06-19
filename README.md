@@ -38,3 +38,30 @@ Usage:
 
 `--k` size of the k-mer given as integer.
 
+## cov_analysis.py
+This script calculates the coverage of a region of interest compared to the coverage of the respective chromosome based on a BAM file.
+
+```
+Usage:  
+  python cov_analysis.py --cov <FILE> --fig <FILE> --chr <STR> --start <INT> --end <INT>
+  					 <COVERAGE_FILE>
+					 <OUTPUT_FIGURE_FILE>
+					 <CHROMOSOME_OF_INTEREST>
+					 <START_POSITION>
+					 <END_POSITION>
+  Mandatory:
+  
+  Inputs 
+  --cov    STR     coverage file containing read coverage information per position of the whole chromosome
+  --fig    STR     output file (PDF)
+  --chr    STR     name of chromosome to be analysed
+  --start  INT     start of the region of interest
+  --end    INT     end of the region of interest
+```
+
+`--cov` coverage file containing in the first column the chromosome name, in the second the position, and in the third column the read coverage at this position
+
+`--chr` name of chromosome to be analysed. Name must match with the chromosome name in the `--cov` file.
+
+`--start` and `--end` define the region of interest for which coverage will be calculated and then compared to the coverage of the whole chromosome. Mean, mode, and median coverage of the region of interest and the whole chromosome will be calculated. 
+
