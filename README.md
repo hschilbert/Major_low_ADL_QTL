@@ -1,5 +1,5 @@
-# Major_low_ADL_QTL
-scripts belonging to major low ADL QTL publication
+# Major_low_lignin_QTL
+scripts belonging to major low lignin QTL publication
 
 ### Please get in touch if you need help running the scripts on your own data sets: [Hanna Schilbert (email)](mailto:hschilbe@cebitec.uni-bielefeld.de?subject=[GitHub]BnaFLSs_scripts_request) ###
 
